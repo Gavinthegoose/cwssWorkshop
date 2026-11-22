@@ -8,19 +8,19 @@
 ## Directories
 
   .
-├── README
-├── documentation
-│   └── imagery
-├── projects
-├── rawData
-│   └── goodaleWheat_Kochia
-├── scripts
-│   └── r
-└── workingFiles
-    ├── raster
-    └── vector
+├── README  
+├── documentation  
+│   └── imagery  
+├── projects  
+├── rawData  
+│   └── goodaleWheat_Kochia  
+├── scripts  
+│   └── r  
+└── workingFiles  
+    ├── raster  
+    └── vector  
 
-11 directories
+11 directories  
   
 ### /README
 
@@ -41,7 +41,7 @@ A directory to place QGIS project files. Not hosted on GitHub, but is a good ide
 
 ### /rawData
 
-Not hosted on GitHub, but contains the raw UAV data used to compile rasters found in `workingFiles/raster/goodaleWheat_Kochia. The R script in `scripts/r` are what convert the raw data to vegetation indiices used in this project.  
+Not hosted on GitHub, but contains the raw UAV data used to compile rasters found in `workingFiles/raster/goodaleWheat_Kochia`. The R script in `scripts/r` are what convert the raw data to vegetation indiices used in this project.  
 
 
 #### goodaleWheat_Kochia
