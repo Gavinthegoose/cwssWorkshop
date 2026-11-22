@@ -1,0 +1,1 @@
+Not hosted on GitHub, but contains the raw UAV data used to compile rasters found in `workingFiles/raster/goodaleWheat_Kochia. The R script in `scripts/r` are what convert the raw data to vegetation indiices used in this project.

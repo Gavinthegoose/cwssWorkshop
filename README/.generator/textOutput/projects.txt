@@ -1,0 +1,1 @@
+A directory to place QGIS project files. Not hosted on GitHub, but is a good idea to place in your project root when working on this workshop.

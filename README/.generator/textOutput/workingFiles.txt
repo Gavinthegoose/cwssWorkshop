@@ -1,0 +1,1 @@
+Holds working files created from the manipulation of rawData. Further work in QGIS is saved to this directory. Splits into Vector and Raster for the two data types.

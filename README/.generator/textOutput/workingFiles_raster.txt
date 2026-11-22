@@ -1,0 +1,1 @@
+Raster files created during the creation of this project. Great examples of organizing spatial data can be found throughout the directory.  
