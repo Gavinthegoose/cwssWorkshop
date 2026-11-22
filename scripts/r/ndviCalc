@@ -1,0 +1,84 @@
+## Script to caclulate NDVI from Jap's UAV Data
+## Datasource: z:\zArchive\Jap\2022_RGBNIR_sites
+## Author: Walker Maess
+## Date: November 3, 2026
+
+### Load Data ###
+
+root <- "C:/Users/wrm100/gavinthegoose/cwssWorkshop/"
+dir.exists(root) # Sanity check
+
+fieldBorder <- terra::vect(paste0(root, "workingFiles/bounds/cwss_AOI.gpkg"))
+
+rawFiles <- Sys.glob(paste0(root, "rawData/goodaleWheat_Kochia/*.tif"))
+
+calcNDVI <- function(data){
+  redBand <- data@data$Red.2
+  nirBand <- data@data$NIR
+
+  ndvi <- (nirBand - redBand) / (nirBand + redBand)
+
+  data@data$NDVI <- ndvi
+
+  return(terra::rast(data["NDVI"]))
+}
+
+calcEVI <- function(data){
+
+  blueBand <- data@data$Blue
+  redBand <- data@data$Red.2
+  nirBand <- data@data$NIR
+
+  evi <- 2.5 * ((nirBand - redBand) / ((nirBand + (6 * redBand) - (7.5 * blueBand) + 1)))
+
+  eviFilt <- ifelse(is.infinite(evi) | evi < -2 | evi > 2, NA, evi)
+
+  data@data$EVI <- eviFilt
+
+  return(terra::rast(data["EVI"]))
+}
+
+calcGNDVI <- function(data){
+
+  greenBand <- data@data$Green.2
+  nirBand <- data@data$NIR
+
+  gndvi <- (nirBand - greenBand) / (nirBand + greenBand)
+
+  data@data$GNDVI <- gndvi
+
+  return(terra::rast(data['GNDVI']))
+}
+
+for (f in rawFiles[5]) {
+
+  dateStr <- strsplit(f, "_")[[1]][4]
+  dateStr_num <- strsplit(dateStr, "")[[1]][1:8]
+  dateStr_Final <- paste(dateStr_num, collapse = "")
+
+  dateFold <- paste0(root, "workingFiles/goodaleWheat_Kochia/", dateStr_Final)
+  dir.create(dateFold)
+
+  img <- terra::rast(f)
+
+  img_20 <- terra::aggregate(img, fact = 4, fun = "mean")
+
+  img_c <- terra::crop(img_20, fieldBorder, mask = TRUE)
+
+  img_SP <- as(raster::brick(img_c), "SpatialPixelsDataFrame")
+
+
+  # Calculate NDVI #
+  ndvi <- calcNDVI(img_SP)
+  evi <- calcEVI(img_SP)
+  gndvi <- calcGNDVI(img_SP)
+
+  terra::writeRaster(ndvi,
+    filename = paste0(dateFold,"/ndvi_", dateStr), overwrite = TRUE
+  )
+  terra::writeRaster(evi,
+  filename = paste0(dateFold, "/evi_", dateStr), overwrite = TRUE)
+  terra::writeRaster(gndvi,
+  filename = paste0(dateFold, "/gndvi_", dateStr), overwrite = TRUE)
+
+}

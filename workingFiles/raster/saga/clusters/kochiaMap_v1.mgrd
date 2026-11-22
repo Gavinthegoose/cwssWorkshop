@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <DATABASE></DATABASE>
+  <SOURCE></SOURCE>
+  <HISTORY saga-version="9.12.4">
+    <TOOL library="imagery_classification" id="1" name="K-Means Clustering for Grids">
+      <OPTION type="grid_system" id="PARAMETERS_GRID_SYSTEM" name="Grid System">
+        <CELLSIZE>0.1952042993795817</CELLSIZE>
+        <XMIN>397281.7183987995</XMIN>
+        <YMIN>5768045.350797924</YMIN>
+        <XMAX>398101.9668647925</XMAX>
+        <YMAX>5768354.749612441</YMAX>
+      </OPTION>
+      <OPTION type="choice" id="METHOD" name="Method" index="1">Hill-Climbing (Rubin 1967)</OPTION>
+      <OPTION type="integer" id="NCLUSTER" name="Clusters">2</OPTION>
+      <OPTION type="integer" id="MAXITER" name="Maximum Iterations">10</OPTION>
+      <OPTION type="boolean" id="NORMALISE" name="Normalise">true</OPTION>
+      <OPTION type="choice" id="INITIALIZE" name="Start Partition" index="0">random</OPTION>
+      <OPTION type="boolean" id="OLDVERSION" name="Old Version">false</OPTION>
+      <INPUT_LIST type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+        <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+          <FILE>C:/Users/wrm100/AppData/Local/Temp/2/processing_aaEITV/d608500cbfc54edd97872a1af319de5a/evi20220830data.sgrd</FILE>
+        </INPUT>
+        <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+          <FILE>C:/Users/wrm100/AppData/Local/Temp/2/processing_aaEITV/1ca6e2608f94416d90a6e62cd4421464/gndvi20220830data.sgrd</FILE>
+        </INPUT>
+        <INPUT type="grid_list" id="GRIDS" name="Grids" system="PARAMETERS_GRID_SYSTEM">
+          <FILE>C:/Users/wrm100/AppData/Local/Temp/2/processing_aaEITV/8d0e479c8a8240eeb3508bc9f1d9dc2e/ndvi20220830data.sgrd</FILE>
+        </INPUT>
+      </INPUT_LIST>
+      <OUTPUT type="grid" id="CLUSTER" name="Clusters">Clusters</OUTPUT>
+    </TOOL>
+  </HISTORY>
+  <FILE></FILE>
+  <DESCRIPTION></DESCRIPTION>
+  <PROJECTION>
+    <WKT2>PROJCRS["WGS 84 / UTM zone 13N",BASEGEODCRS["WGS 84",DATUM["World Geodetic System 1984",ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]]],CONVERSION["UTM zone 13N",METHOD["Transverse Mercator",ID["EPSG",9807]],PARAMETER["Latitude of natural origin",0,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8801]],PARAMETER["Longitude of natural origin",-105,ANGLEUNIT["degree",0.0174532925199433],ID["EPSG",8802]],PARAMETER["Scale factor at natural origin",0.9996,SCALEUNIT["unity",1],ID["EPSG",8805]],PARAMETER["False easting",500000,LENGTHUNIT["metre",1],ID["EPSG",8806]],PARAMETER["False northing",0,LENGTHUNIT["metre",1],ID["EPSG",8807]]],CS[Cartesian,2],AXIS["easting",east,ORDER[1],LENGTHUNIT["metre",1]],AXIS["northing",north,ORDER[2],LENGTHUNIT["metre",1]],ID["EPSG",32613]]</WKT2>
+    <PROJ>+proj=utm +zone=13 +datum=WGS84 +units=m +no_defs +type=crs</PROJ>
+    <CODE authority="EPSG">32613</CODE>
+  </PROJECTION>
+</SAGA_METADATA>
