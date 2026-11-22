@@ -7,20 +7,20 @@
   
 ## Directories
 
-  .
-├── README
-├── documentation
-│   └── imagery
-├── projects
-├── rawData
-│   └── goodaleWheat_Kochia
-├── scripts
-│   └── r
-└── workingFiles
-    ├── raster
-    └── vector
-
-11 directories
+  .  
+├── README  
+├── documentation  
+│   └── imagery  
+├── projects  
+├── rawData  
+│   └── goodaleWheat_Kochia  
+├── scripts  
+│   └── r  
+└── workingFiles  
+    ├── raster  
+    └── vector  
+  
+11 directories  
   
 ### /README
 
