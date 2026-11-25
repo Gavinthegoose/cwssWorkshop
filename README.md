@@ -58,10 +58,6 @@ Not used
 
 R script used to create the vegetation indices used in this project. Meant to be readable and usable for a variety of data.
 
-#### /r
-
-Houses the R script.  
-
 ### /workingFiles
 
 Intermediate files from the processed vegetation indices. Outputs from QGIS functions should be saved here.
