@@ -1,4 +1,4 @@
-# CWSS 2026 Workshop Saskatoon
+# CWSS 2026 Workshop Saskatoon - Kochia
 
 ## Metadata
 
