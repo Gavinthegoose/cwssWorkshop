@@ -38,10 +38,6 @@ README information on the project
 
 Instructions on how to complete this workshop
 
-#### /imagery
-
-Not used  
-
 ### /projects
 
 A good place to store QGIS project files. Highly recommended you use this directory to save the `.qgz` from QGIS.
@@ -49,10 +45,6 @@ A good place to store QGIS project files. Highly recommended you use this direct
 ### /rawData
 
 Raw UAV imagery, not stored on Github due to it's size.
-
-#### /goodaleWheat_Kochia
-
-Not used  
 
 ### /scripts
 
