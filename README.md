@@ -8,7 +8,7 @@
 
 ## Project Background
 
-This workshop works through how to create an On/Off Variable Rate application map for herbicide products. In this workshop we take on the role of an agronomist, where your client has requested a maVRA map of their field to target areas of high kochia density. The client, located in the Black Soil Zone of Saskatchewan, has indicated that he will be using Edge MicroActiv to treat areas heavily affected by kochia. To achieve the client's wishes we have flown this field with a drone equipped with a multispectral camera. Images have been stitched together using photogrammetry software. Our job is to take this imagery and create a VRA map ready to be imported into the clients JD 4630 display.  
+This workshop works through how to create an On/Off Variable Rate application map for herbicide products. In this workshop we take on the role of an agronomist, where your client has requested a VRA map of their field to target areas of high kochia density. The client, located in the Black Soil Zone of Saskatchewan, has indicated that he will be using Edge MicroActiv to treat areas heavily affected by kochia. To achieve the client's wishes we have flown this field with a drone equipped with a multispectral camera. Images have been stitched together using photogrammetry software. Our job is to take this imagery and create a VRA map ready to be imported into the clients JD 4630 display.  
 
 
 ## Directories
